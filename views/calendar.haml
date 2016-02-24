@@ -1,0 +1,12 @@
+%section
+  %h5 Next 10 events
+  %table
+    %thead
+      %tr
+        %th Time
+        %th Summary
+    %tbody
+      - @result.items.each do |event|
+        %tr
+          %td= event.start.date_time || event.start.date
+          %td= event.summary

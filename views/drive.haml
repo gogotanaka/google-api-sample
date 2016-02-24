@@ -1,0 +1,12 @@
+%h5 10 most recently modified files
+%table
+  %thead
+    %tr
+      %th Name
+      %th Last Modified
+  %tbody
+    - @result.files.each do |file|
+      %tr
+        %td
+          %a{:href => "#{file.web_view_link}"}= file.name
+        %td= file.modified_time

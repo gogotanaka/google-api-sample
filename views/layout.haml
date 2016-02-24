@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
+    %meta{:content => "#{@client_id}", :name => "google-signin-client_id"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    :css
+      .navigation a {
+        padding: 10px;
+      }
+      .main {
+        padding: 10px;
+      }
+  %body
+    .navigation
+      %a{:href => "/"} Home
+      %a{:href => "/drive"} Google Drive Sample
+      %a{:href => "/calendar"} Google Calendar Sample
+    .main
+      = yield
